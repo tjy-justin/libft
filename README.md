@@ -1,4 +1,4 @@
-# libft
+# Libft
 
 ![](ascii.png)
 
@@ -28,7 +28,13 @@
 - ft_calloc
 - ft_strdup
 
+### Docs
+
 - https://www.geeksforgeeks.org/size_t-data-type-c-language/
+- https://www.geeksforgeeks.org/c-typecasting/
+- https://cs50.stackexchange.com/questions/14615/memory-overlap-in-c
+- https://opensource.apple.com/source/Libc/Libc-997.1.1/string/strlcat.c.auto.html
+- https://opensource.apple.com/source/xnu/xnu-4570.1.46/osfmk/arm/strlcpy.c.auto.html
 
 ## Additional Functions
 
