@@ -2,6 +2,8 @@
 
 ![](ascii.png)
 
+To remove `.o` files, do `make clean`.
+
 ## Libc Functions
 
 - ft_isalpha
