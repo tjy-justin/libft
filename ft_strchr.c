@@ -1,5 +1,7 @@
 #include "libft.h"
 
+// locates 1 char in string
+
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
@@ -16,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	// redundancy check for '\0'
+	// check for '\0'
 	if (cc == s[i])
 		return ((char *)&s[i]);
 	// no match = return (NULL);

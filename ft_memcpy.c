@@ -1,7 +1,6 @@
 #include "libft.h"
 
 // copies max of n bytes from src to dst
-// safer to use unsigned char
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

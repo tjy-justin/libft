@@ -1,7 +1,6 @@
 #include "libft.h"
 
 // strchr() but returns last occurence
-// only return at last
 
 char	*ft_strrchr(const char *s, int c)
 {

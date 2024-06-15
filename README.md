@@ -16,8 +16,8 @@ To remove `.o` files, do `make clean`.
 - ft_bzero
 - ft_memcpy
 - ft_memmove
-- ft_strlcpy
-- ft_strlcat
+- ft_strlcpy //
+- ft_strlcat //
 - ft_toupper
 - ft_tolower
 - ft_strchr
@@ -25,7 +25,7 @@ To remove `.o` files, do `make clean`.
 - ft_strncmp
 - ft_memchr
 - ft_memcmp
-- ft_strnstr
+- ft_strnstr //
 - ft_atoi
 - ft_calloc
 - ft_strdup
@@ -37,6 +37,7 @@ To remove `.o` files, do `make clean`.
 - https://cs50.stackexchange.com/questions/14615/memory-overlap-in-c
 - https://opensource.apple.com/source/Libc/Libc-997.1.1/string/strlcat.c.auto.html
 - https://opensource.apple.com/source/xnu/xnu-4570.1.46/osfmk/arm/strlcpy.c.auto.html
+- https://opensource.apple.com/source/Libc/Libc-1158.30.7/string/FreeBSD/strnstr.c.auto.html
 
 ## Additional Functions
 
