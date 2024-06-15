@@ -1,6 +1,11 @@
 #include "libft.h"
 
-int	atoi(const char *str)
+// skips whitespace & space
+// convert str - to int -
+// digit shifted left by * 10
+// convert by - '0'
+
+int	ft_atoi(const char *str)
 {
 	int res;
 	int sign;
@@ -10,22 +15,15 @@ int	atoi(const char *str)
 	sign = 1;
 	i = 0;
 
-	// skips whitespace & space
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-
-	// convert str - to int -
 	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-		{
 			sign *= -1;
-			i++;
-		}
+		i++;
 	}
 
-	// digit shifted left by * 10
-	// convert by - '0'
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res *= 10;

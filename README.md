@@ -3,6 +3,7 @@
 ![](ascii.png)
 
 To remove `.o` files, do `make clean`.
+String functions use `char`, functions that work with other data use `unsigned char`.
 
 ## Libc Functions
 
