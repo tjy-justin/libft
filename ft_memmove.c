@@ -1,8 +1,6 @@
 #include "libft.h"
 
 // memcpy() but handles memory overlapping
-// if copies from beginning, else copies from end
-// does it matter whether pre- or post- increment?
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
@@ -13,6 +11,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	altdst = (unsigned char *)dst;
 	altsrc = (unsigned char *)src;
 	i = 0;
+
+	// copies from start
 	if (altdst < altsrc)
 	{
 		while (i < n)
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			altdst[i] = altsrc[i];
 		}
 	}
+
+	// copies from end
 	else
 	{
 		while (n > 0)

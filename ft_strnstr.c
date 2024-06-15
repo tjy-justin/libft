@@ -1,12 +1,13 @@
 #include "libft.h"
 
-// locates substring in a string
-// finds needle in a haystack
+// strstr() locates substr in str
+// finds needle *find in a haystack *s
+// strstr() with size
 
-char	*ft_strnstr(const char *s, const char *find, size_t slen)
+char	*ft_strnstr(const char *s, const char *find, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;
@@ -14,27 +15,19 @@ char	*ft_strnstr(const char *s, const char *find, size_t slen)
 	{
 		return ((char *)s);
 	}
-	while (s[i] && i < slen)
+	while (s[i] && i < len)
 	{
-		while (s[i + j] == find[j] && i + j < slen)
+		while (s[i + j] == find[j] && i + j < len)
 		{
-			return ((char *)s);
+			j++;
+			// full match found
+			if (find[i] == '\0')
+				// points to the substr of haystack
+				return ((char *)s + i);
 		}
 		i++;
+		// ensures each i compared with beginning j
+		j = 0;
 	}
 	return (NULL);
 }
-
-// strstr() impl.
-// while (str[i] != '\0')
-// {
-//     while (str[i + j] == to_find[j]) // if str[i] loop exits  w/o match
-//     {
-//         if (to_find[j + 1] == '\0') // reaches end of j
-//         {
-//             return (str + i); // returns rest of str
-//         }
-//         j++;
-//     }
-//     i++;
-// }

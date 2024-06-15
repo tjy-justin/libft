@@ -1,5 +1,6 @@
 #include "libft.h"
 
+// strchr() locates char in str
 // strchr() but returns last occurence
 
 char	*ft_strrchr(const char *s, int c)

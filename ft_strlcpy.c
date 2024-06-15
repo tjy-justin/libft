@@ -1,12 +1,14 @@
 #include "libft.h"
 
+// strcpy() str copy with size
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
 	size_t srclen;
 
 	srclen = ft_strlen(src);
-	// + 1 ensures null included in string
-	// when dst have enough byte for src
+	// + 1 ensures null included in str
+	// when dst have enough bytes for src
 	if (n > srclen + 1)
 	{
 		ft_memcpy(dst, src, srclen + 1);

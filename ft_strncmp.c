@@ -1,7 +1,8 @@
 #include "libft.h"
 
-// strcmp() but limited by n chars
-// compare str instead of binary data, after '\0' not compared
+// strcmp() compare strings
+// strcmp() with size
+// compare str not binary data, after '\0' not compared
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
