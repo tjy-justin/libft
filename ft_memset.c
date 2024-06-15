@@ -6,26 +6,26 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 22:56:18 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/15 17:14:32 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/15 17:48:13 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
 
-// len bytes of value c to the string b
+// n bytes of value c to the string b
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*bb;
+	unsigned char	*ss;
 
 	// type casting
-	bb = (unsigned char *)b;
-	while (len > 0)
+	ss = (unsigned char *)s;
+	while (n > 0)
 	{
 		// man: convert c to unsig char
-		*bb = (unsigned char)c;
-		bb++;
-		len--;
+		*ss = (unsigned char)c;
+		ss++;
+		n--;
 	}
-	return (b);
+	return (s);
 }

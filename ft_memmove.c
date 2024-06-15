@@ -4,7 +4,7 @@
 // if copies from beginning, else copies from end
 // does it matter whether pre- or post- increment?
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	unsigned char *altdst;
 	unsigned char *altsrc;
@@ -15,7 +15,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (altdst < altsrc)
 	{
-		while (i < len)
+		while (i < n)
 		{
 			i++;
 			altdst[i] = altsrc[i];
@@ -23,10 +23,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (len > 0)
+		while (n > 0)
 		{
-			len--;
-			altdst[len] = altsrc[len];
+			n--;
+			altdst[n] = altsrc[n];
 		}
 	}
 	return (dst);

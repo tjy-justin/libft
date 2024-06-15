@@ -3,7 +3,7 @@
 // locates substring in a string
 // finds needle in a haystack
 
-char	*ft_strnstr(const char *s, const char *find, size_t len)
+char	*ft_strnstr(const char *s, const char *find, size_t slen)
 {
 	size_t	i;
 	size_t	j;
@@ -14,9 +14,9 @@ char	*ft_strnstr(const char *s, const char *find, size_t len)
 	{
 		return ((char *)s);
 	}
-	while (s[i] && i < len)
+	while (s[i] && i < slen)
 	{
-		while (s[i + j] == find[j])
+		while (s[i + j] == find[j] && i + j < slen)
 		{
 			return ((char *)s);
 		}
