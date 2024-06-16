@@ -6,19 +6,19 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t i;
-	unsigned char *heap;
+	unsigned char *dst;
 
 	i = 0;
-	heap = malloc(count * size);
+	dst = malloc(count * size);
 
-	if (!heap)
+	if (!dst)
 	{
 		return (NULL);
 	}
 
 	while (i < count * size)
 	{
-		heap[i++] = 0;
+		dst[i++] = 0;
 	}
-	return (heap);
+	return (dst);
 }

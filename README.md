@@ -39,14 +39,17 @@ String functions use `char`, functions that work with other data use `unsigned c
 - https://opensource.apple.com/source/Libc/Libc-997.1.1/string/strlcat.c.auto.html
 - https://opensource.apple.com/source/xnu/xnu-4570.1.46/osfmk/arm/strlcpy.c.auto.html
 - https://opensource.apple.com/source/Libc/Libc-1158.30.7/string/FreeBSD/strnstr.c.auto.html
+- https://cplusplus.com/reference/cstring/strncpy/
+- https://www.computerhope.com/jargon/f/file-descriptor.htm
+- https://www.educative.io/answers/splitting-a-string-using-strtok-in-c
 
 ## Additional Functions
 
 - ft_substr
 - ft_strjoin
 - ft_strtrim
-- ft_split
-- ft_itoa
+- ft_split //
+- ft_itoa //
 - ft_strmapi
 - ft_striteri
 - ft_putchar_fd
