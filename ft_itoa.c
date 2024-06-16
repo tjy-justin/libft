@@ -1,7 +1,7 @@
 #include "libft.h"
 
-static int	int_len(long nbr);
-static char	*nbr_loc(int len);
+static int	ft_intlen(long nbr);
+static char	*ft_nbrloc(int len);
 
 // opposite of atoi(), convert num to str
 // alloc mem by counting strlen
@@ -16,8 +16,8 @@ char	*ft_itoa(int n)
 
 	// long handles int min max
 	nbr = n;
-	len = int_len(nbr);
-	res = nbr_loc(len);
+	len = ft_intlen(nbr);
+	res = ft_nbrloc(len);
 	if (!res)
 		return (NULL);
 	// convert last digit until first
@@ -30,7 +30,7 @@ char	*ft_itoa(int n)
 }
 
 // counts int len
-static int	int_len(long nbr)
+static int	ft_intlen(long nbr)
 {
 	int	n;
 
@@ -53,7 +53,7 @@ static int	int_len(long nbr)
 }
 
 // alloc mem for nbr
-static char	*nbr_loc(int len)
+static char	*ft_nbrloc(int len)
 {
 	char *arr;
 
