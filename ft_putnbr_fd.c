@@ -6,12 +6,12 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n = -2147483648)
-		ft_putstr_fd(fd, "-2147483648", 1);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
 	// putchar -, neutralize int -
 	if (n < 0)
 	{
-		ft_putchar_fd(fd, "-", 1);
+		write(fd, "-", 1);
 		n *= -1;
 	}
 	if (n >= 10)

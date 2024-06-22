@@ -34,8 +34,8 @@ char	**ft_split(char const *s, char c)
 		else
 			s++;
 		tok[i] = 0;
-		return (tok);
 	}
+	return (tok);
 }
 
 // count tokens

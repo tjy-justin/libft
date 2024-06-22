@@ -17,12 +17,12 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	// copy s1
 	while (s1[i])
-		str[j++] == s1[i++];
+		str[j++] = s1[i++];
 
 	// reset index, copy s2
 	i = 0;
 	while (s2[i])
-		str[j++] == s2[i++];
-	str[i] = '\0';
+		str[j++] = s2[i++];
+	str[j] = '\0';
 	return (str);
 }

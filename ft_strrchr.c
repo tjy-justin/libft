@@ -7,9 +7,10 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int i;
 	char cc;
-	char last;
+	char *last;
 
-	cc = (char *)c;
+	i = 0;
+	cc = (char)c;
 	// returns as NULL by default if no match
 	// else value returned at last
 	last = NULL;

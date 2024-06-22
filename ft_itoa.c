@@ -27,6 +27,7 @@ char	*ft_itoa(int n)
 		nbr /= 10;
 		i--;
 	}
+	return (res);
 }
 
 // counts int len
