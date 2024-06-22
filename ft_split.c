@@ -1,3 +1,15 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/23 04:46:58 by jin-tan           #+#    #+#             */
+/*   Updated: 2024/06/23 04:46:59 by jin-tan          ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 #include "libft.h"
 
 static size_t	ft_toklen(const char *s, char c);
@@ -12,12 +24,12 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	len;
 
-	tok = 0;
+	tok = NULL;
 	i = 0;
 	j = 0;
 	tok = malloc((ft_toklen(s, c) + 1) * sizeof(char *));
 	if (!tok)
-		return (0);
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c)
@@ -25,16 +37,18 @@ char	**ft_split(char const *s, char c)
 			// reset len for each token
 			len = 0;
 			// count len until delim
-			while (s[i] && s[i] != c && ++len)
-				++i;
+			while (s[i + len] && s[i + len] != c)
+				len++;
 			// make substr from s - len
 			// eg hello,world is s - 5 for hello
-			tok[j++] = ft_substr(s - len, 0, len);
+			tok[j] = ft_substr(s + i, 0, len);
+			j++;
+			i += len;
 		}
 		else
-			s++;
-		tok[i] = 0;
+			i++;
 	}
+	tok[j] = NULL;
 	return (tok);
 }
 
@@ -48,6 +62,7 @@ static size_t	ft_toklen(const char *s, char c)
 	tok = 0;
 	i = 0;
 	flag = 0;
+
 	while (s[i])
 	{
 		// add token for each word by delim

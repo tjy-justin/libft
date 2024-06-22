@@ -35,6 +35,8 @@ files = ft_isalpha \
         ft_putendl_fd \
         ft_putnbr_fd
 
+bfiles = ft_lstnew
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 

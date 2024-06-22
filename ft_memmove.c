@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 18:04:34 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/16 18:47:14 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/23 04:46:42 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -29,8 +29,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	{
 		while (i < n)
 		{
-			i++;
 			altdst[i] = altsrc[i];
+			i++;
 		}
 	}
 
@@ -39,8 +39,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	{
 		while (n > 0)
 		{
-			altdst[n] = altsrc[n];
 			n--;
+			altdst[n] = altsrc[n];
 		}
 	}
 	return (dst);

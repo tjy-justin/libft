@@ -59,3 +59,10 @@ String functions use `char`, functions that work with other data use `unsigned c
 - https://cplusplus.com/reference/cstring/strncpy/
 - https://www.computerhope.com/jargon/f/file-descriptor.htm
 - https://www.educative.io/answers/splitting-a-string-using-strtok-in-c
+- https://users.cs.utah.edu/~germain/PPS/Topics/recursion.html
+
+## Tester
+
+```
+sudo apt install valgrind libbsd-dev libncurses-dev
+```

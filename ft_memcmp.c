@@ -1,8 +1,20 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/23 04:46:32 by jin-tan           #+#    #+#             */
+/*   Updated: 2024/06/23 04:46:33 by jin-tan          ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 #include "libft.h"
 
 // strncmp() but compare bytes
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t i;
 	unsigned char *ss1;

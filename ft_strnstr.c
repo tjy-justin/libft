@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 18:06:33 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/16 18:06:33 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/23 04:47:26 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -23,16 +23,17 @@ char	*ft_strnstr(const char *s, const char *find, size_t len)
 
 	i = 0;
 	j = 0;
+
 	if (find[0] == '\0')
 		return ((char *)s);
 
 	while (s[i] && i < len)
 	{
-		while (s[i + j] == find[j] && i + j < len)
+		while (s[i + j] && s[i + j] == find[j] && i + j < len)
 		{
 			j++;
 			// full match found
-			if (find[i] == '\0')
+			if (find[j] == '\0')
 				// points to the substr of haystack
 				return ((char *)s + i);
 		}
