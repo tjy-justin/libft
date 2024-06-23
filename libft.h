@@ -6,12 +6,13 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 20:29:55 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/23 05:13:41 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/23 15:39:08 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
 
