@@ -6,12 +6,13 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 04:46:58 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/23 17:41:43 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/23 18:21:20 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char		**ft_alloc(size_t size);
 static size_t	ft_toklen(const char *s, char c);
 
 // split str by delimiter c
@@ -30,11 +31,11 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	len;
 
+	tok = ft_alloc(ft_toklen(s, c) + 1);
+	if (!s || !tok)
+		return (NULL);
 	i = 0;
 	j = 0;
-	tok = malloc((ft_toklen(s, c) + 1) * sizeof(char *));
-	if (!tok)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c)
@@ -52,13 +53,24 @@ char	**ft_split(char const *s, char c)
 	return (tok);
 }
 
-// count tokens
+static char	**ft_alloc(size_t size)
+{
+	char	**tok;
+
+	tok = malloc(size * sizeof(char *));
+	if (!tok)
+		return (NULL);
+	return (tok);
+}
+
 static size_t	ft_toklen(const char *s, char c)
 {
 	size_t	tok;
 	size_t	i;
 	size_t	flag;
 
+	if (!s)
+		return (0);
 	tok = 0;
 	i = 0;
 	flag = 0;

@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 04:47:30 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/23 17:31:59 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/23 18:03:55 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int		j;
 	char	*str;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))

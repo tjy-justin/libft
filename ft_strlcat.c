@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 18:04:23 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/23 17:48:55 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/23 18:20:12 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	size_t	j;
 	size_t	srclen;
 
+	if (!dst || !src)
+		return (0);
 	j = 0;
 	i = ft_strlen(dst);
 	srclen = ft_strlen(src);
