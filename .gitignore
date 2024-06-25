@@ -1,4 +1,6 @@
 .DS_Store
-.o
-.a
 *.Identifier
+
+*.o
+*.a
+*.out
