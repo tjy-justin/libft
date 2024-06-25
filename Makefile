@@ -25,21 +25,21 @@ OBJS = ${SRC:.c=.o}
 OBJSB = ${SRCB:.c=.o}
 
 %.o:%.c
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-${NAME}: ${OBJS} ${OBJSB}
-	${AR} ${NAME} ${OBJS} ${OBJSB}
+$(NAME): $(OBJS) $(OBJSB)
+	$(AR) $(NAME) $(OBJS) $(OBJSB)
 
-all: ${NAME}
+all: $(NAME)
 
-bonus: ${OBJSB}
-	${AR} ${NAME} ${OBJSB}
+bonus: $(OBJSB)
+	$(AR) $(NAME) $(OBJSB)
 
 clean:
-	${RM} ${OBJS} ${OBJSB}
+	$(RM) $(OBJS) $(OBJSB)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
