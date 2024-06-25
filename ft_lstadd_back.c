@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 01:27:09 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/26 01:47:07 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/26 05:06:06 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
 	last = ft_lstlast(*lst);
 	if (!last)
 		*lst = new;

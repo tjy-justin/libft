@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 03:15:54 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/26 03:43:58 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/26 05:16:23 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_node;
 
-	new_node = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
+	new_lst = NULL;
+	new_node = NULL;
 	while (lst)
 	{
 		new_node = ft_lstnew(f(lst->content));

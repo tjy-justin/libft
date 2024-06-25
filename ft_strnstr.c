@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 18:06:33 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/23 18:17:43 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/26 05:03:21 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ char	*ft_strnstr(const char *s, const char *find, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!s || !find)
-		return (NULL);
+	if (!len && !s)
+		return (0);
 	i = 0;
-	j = 0;
-	if (find[0] == '\0')
+	if (!*find)
 		return ((char *)s);
+	j = 0;
 	while (s[i] && i < len)
 	{
 		while (s[i + j] && s[i + j] == find[j] && i + j < len)

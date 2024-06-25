@@ -6,7 +6,7 @@
 /*   By: jin-tan <jin-tan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 02:01:17 by jin-tan           #+#    #+#             */
-/*   Updated: 2024/06/26 00:53:56 by jin-tan          ###   ########.fr       */
+/*   Updated: 2024/06/26 05:21:18 by jin-tan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*elem;
+	t_list	*new;
 
-	elem = malloc(sizeof(t_list));
-	if (!elem)
+	new = malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
-	elem->content = content;
-	elem->next = NULL;
-	return (elem);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

@@ -127,8 +127,8 @@ make f
 
 ```
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(SRCB)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSB)
 .PHONY: so
 ```
 
