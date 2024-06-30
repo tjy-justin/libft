@@ -1,10 +1,36 @@
 # Libft
 
+This is a rewrite of various Libc functions from `<ctype.h>, <stdlib.h>, <string.h>`, as well as other general purpose functions.
+
+String functions use `char`.
+
+Binary functions use `unsigned char`.
+
+Integers use `int` or `size_t`, depending on parameters.
+
 ![](ascii.png)
 
-String functions use `char`
-Binary functions use `unsigned char`
-Integers use `int` or `size_t`, depends on parameters
+## File Descriptor
+
+When you use `write(2)` function, a file descriptor is used.
+
+0 (stdin): reading user input from the terminal.
+
+1 (stdout): writing to the terminal.
+
+2 (stderr): writing errors to the terminal, can be redirected to a log file.
+
+## Linked Lists
+
+Node: A unit in a linked list containing data and a pointer to the next node.
+
+Linked List: A series of nodes where each node points to the next.
+
+Head: The first node in the linked list.
+
+NULL: Indicates the end of the linked list.
+
+![alt text](llist.png)
 
 ## Libc Functions
 
@@ -82,13 +108,6 @@ Integers use `int` or `size_t`, depends on parameters
 
 ### Docs
 
-Node: A unit in a linked list containing data and a pointer to the next node.
-Linked List: A series of nodes where each node points to the next.
-Head: The first node in the linked list.
-NULL: Indicates the end of the linked list.
-
-![alt text](image.png)
-
 - https://youtu.be/E4lb2gkyXr8
 - https://youtu.be/0euvEdPwQnQ?t=1833
 - https://youtu.be/R9PTBwOzceo&list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&index=31
@@ -103,9 +122,18 @@ NULL: Indicates the end of the linked list.
 
 ## Testers
 
+- https://github.com/xicodomingues/francinette
 - https://github.com/Tripouille/libftTester
 - https://github.com/alelievr/libft-unit-test
 - https://github.com/jtoty/Libftest
+
+`francinette` or `paco`:
+
+```
+bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
+
+libft % paco calloc
+```
 
 `libftTester`:
 
